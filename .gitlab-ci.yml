@@ -18,4 +18,4 @@ include:
   script:
     - renovate $CI_PROJECT_PATH
   tags:
-    - docker-selfhosted
+    - docker-self
