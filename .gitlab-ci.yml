@@ -8,6 +8,8 @@ build:
   rules:
     - when: never
 
+# Below this is just for running renovate, unrelated to the bug
+
 include:
   - project: renovate-bot/renovate-runner
     ref: a33cad75e275d0d5ffb0394b1ae1351eb264fa4f
