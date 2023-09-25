@@ -5,3 +5,17 @@ build:
     entrypoint: [ "" ]
   script:
     - echo ignored
+  rules:
+    - when: never
+
+include:
+  - project: renovate-bot/renovate-runner
+    ref: a33cad75e275d0d5ffb0394b1ae1351eb264fa4f
+    file: templates/renovate.gitlab-ci.yml
+
+.renovate:
+  cache: null
+  script:
+    - renovate $CI_PROJECT_PATH
+  tags:
+    - docker-selfhosted
